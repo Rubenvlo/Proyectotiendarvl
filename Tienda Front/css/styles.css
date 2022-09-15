@@ -1,0 +1,263 @@
+:root{
+    --azul: #6fcffe;
+    --blanco: #FFFFFF;
+    --amarillo: #F1EB20;
+    --negro: #000000;
+    --azuloscuro:#ffffffff;
+
+    --fuenteprincipal:'ms Madi', cursive;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  /* Globales */
+
+body{
+    background-color: var(--azul);
+    font-size: 1.6rem;
+    line-height: 1.5;  
+}
+p{
+    font-size: 1.8;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blanco);
+}
+
+a{
+    text-decoration: none;
+    color: var(--blanco);
+    font-size: 2.8rem;
+
+}
+img{
+    max-width: 100%;
+    width: 100%;
+}
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+/* tipografía */
+h1,h2,h3{
+    text-align: center;
+    color: var(--blanco);
+    font-family: var(--fuenteprincipal);
+}
+
+h1{
+    font-size: 4rem;
+}
+
+h2{
+    font-size: 3.2rem;
+}
+
+h3{
+    font-size: 2.4rem;
+}
+
+/* header */
+.header{
+    display: flex;
+    justify-content: center;
+}
+
+.header__logo{
+    margin: 3rem;
+    border-radius: 50%;
+    width: 70%;
+}
+.pilar{
+    width: 20%;
+}
+
+/* footer */
+.footer{
+    background-color:#ffffff;
+    margin-top: 2rem;
+}
+.footer__texto{
+    color:var(--azul);
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 2.2rem;
+
+}
+/* navegacion */
+.navegacion{
+    display: flex;
+    justify-content: center;
+    background-color: var(--blanco) ;
+    gap: 5rem;
+   
+}
+.navegacion__enlace{
+    font-family: 'Lobster', cursive;
+    color: black;
+}
+
+.navegacion__enlace:hover{
+    color: var(--azul);
+    transition: color .3s ease
+}
+.navegacion__enlace--activo{
+    color: var(--azul)
+}
+
+.aside{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Grid */
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+@media (min-width:768px){
+    .grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Productos */
+.producto{
+    border-radius: 1rem;
+    background-color:var(--azuloscuro);
+    padding: 2rem;
+   
+}
+
+.producto__nombre{
+    font-size: 4rem;
+    color: #000000;
+
+}
+.producto__precio{
+    font-size: 2.8rem;
+    color:var(--negro);
+    font-weight: 700;
+
+}
+.producto__nombre,
+.producto__precio{
+    font-family: 'Lobster', cursive;
+    margin: 1rem 0;
+    text-align: center;
+    line-height: 1.2;
+}
+/* Gráficos */
+.grafico{
+    min-height: 30rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column:  1/3;
+}
+.grafico--camisas{
+    grid-row: 2/3;
+    background-image: url(../img/grafico1.jpg);
+}
+
+.grafico--node{
+    background-image: url(../img/grafico2.jpg);
+    grid-row: 8/9;
+}
+ @media (min-width: 768px){
+ }
+.grafico--node{
+    grid-row: 5/6;
+    grid-column: 2/4;
+
+}
+
+/* Nosotros */
+.sobre-nosotros{
+    display: grid;
+
+}
+
+.imagen-nosotros{
+    background-image: url(../img/nosotros.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 2;
+}
+
+.p{
+   grid-row: 1;
+   margin-right: 3rem;
+   
+}
+
+/* Producto-globales */
+@media (min-width: 768px) {
+    .camisa{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 2rem;
+        
+    }
+  
+}
+.contenedor__camisa{
+    padding: 2rem;
+    background-color: var(--azuloscuro);
+
+}
+/* formulario_producto */
+.formulario{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+
+.formulario__campo{
+  border: 7px solid var(--azuloscuro);
+  background-color: transparent;
+  color:black;
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.formulario__campo::placeholder{
+    color: white;
+}
+
+
+
+.formulario__submit{
+    background-color: white;
+    border: none;
+    color:rgb(0, 0, 0);
+    font-size: 2rem;
+    font-family: var(--fuenteprincipal);
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 2s ease;
+    padding: 2rem;
+    grid-column: 1/3;
+    border-radius: 1rem;
+}
+.formulario__submit:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.398);
+    color: white;
+    font-size:3rem
+    
+
+}
+
+
+
+
+
